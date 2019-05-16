@@ -11,10 +11,13 @@ import { Provider } from 'react-redux';
 
 import { EnthusiasmAction } from './actions/index'
 
-const store = createStore<StoreState, EnthusiasmAction, any, any>(enthusiasm, {
-  enthusiasmLevel: 1,
-  languageName: 'TypeScript',
-});
+const store = createStore<StoreState, EnthusiasmAction, any, any>(
+  enthusiasm, {
+    enthusiasmLevel: 1,
+    languageName: 'TypeScript',
+  },
+  (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 ReactDOM.render(
   <Provider store={store}>

@@ -35,3 +35,10 @@ it('throws when the enthusiasm level is negative', () => {
         enzyme.shallow(<Hello name='Collin' enthusiasmLevel={-1} />);
     }).toThrow();
 })
+
+// it('triggers onIncrement when button is clicked', () => {
+//     expect(() => {
+//         const hello = enzyme.shallow(<Hello name='Collin' />);
+//         expect(hello.find('button').)
+//     })
+// })

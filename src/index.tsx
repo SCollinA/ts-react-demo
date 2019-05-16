@@ -5,7 +5,7 @@ import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-  <Hello name='Collin' enthusiasmLevel={10} />,
+  <Hello name='TypeScript' enthusiasmLevel={10} />,
   document.getElementById('root') as HTMLElement
   // the following would also be an acceptable cast
   // document.getElementById('root')!

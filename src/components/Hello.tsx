@@ -13,7 +13,11 @@ interface State {
 class Hello extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
-        this.state = { currentEnthusiasm: props.enthusiasmLevel || 1};
+        this.state = { 
+            currentEnthusiasm: props.enthusiasmLevel || props.enthusiasmLevel === 0 ? 
+                props.enthusiasmLevel : 
+                1 
+        };
     }
 
     onIncrement = () => this.updateEnthusiasm(this.state.currentEnthusiasm + 1);
